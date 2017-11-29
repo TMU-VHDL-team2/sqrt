@@ -18,6 +18,7 @@ a = 0
 y = 0
 n = 0
 c = 0
+print(hex(x1))
 
 t = x1
 while t > 0:
