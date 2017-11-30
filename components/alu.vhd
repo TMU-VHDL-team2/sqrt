@@ -146,10 +146,10 @@ begin
                     outO <= '0';
                 end if;
             when "0110" =>
-                if(((atop and not (btop and ftop)) or not (atop or btop or ftop)) = '1') then
-                    outO <= '0';
-                else
+                if((atop xor btop) = '1') then
                     outO <= '1';
+                else
+                    outO <= '0';
                 end if;
             when "0111" =>
                 outO <= shift_ov;
